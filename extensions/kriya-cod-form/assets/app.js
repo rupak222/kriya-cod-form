@@ -940,7 +940,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 				console.log(data.data.createNewOrder.result.response.order_status_url);
 				const redirectUrl =
 					data.data.createNewOrder.result.response.order_status_url;
-				// window.location.href = "https://www.google.com";
+				window.location.href = redirectUrl;
 				loadingIcon.classList.remove("loader");
 			})
 			.catch((error) => console.error(error));
