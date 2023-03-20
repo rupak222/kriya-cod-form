@@ -1,0 +1,77 @@
+<head>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v6.3.0/css/all.css"
+  />
+</head>
+
+{% assign product_title = product.title%}
+{% assign product_price = product.price%}
+{% assign product_id = product.id%}
+{% assign product_featured_image = product.featured_image%}
+
+
+{% assign shop_id = shop.id%}
+{% assign shop_currency = shop.currency%}
+{% assign shop_money_format = shop.money_format%}
+{% assign shop_permanent_domain = shop.permanent_domain%}
+
+
+{% assign metafield_buy_button = app.metafields.pragati_cod_form.buy_button_page_json%}
+{% assign metafield_form_designer = app.metafields.pragati_cod_form.form_designer_page_json%}
+{% assign metafield_form_designer2 = app.metafields.pragati_cod_form.form_designer2_page_json%}
+{% assign metafield_states = app.metafields.pragati_cod_form.states_json%}
+{% assign metafield_phoneCode = app.metafields.pragati_cod_form.phone_code%}
+
+
+
+{% assign variant = product.variants.first.id %}
+
+{% assign getCountry = app.metafields.pragati_cod_form.country_name %}
+
+
+
+{% assign metafield_visibility_page = app.metafields.pragati_cod_form.visibility_page_json %}
+
+
+
+
+<script type="text/javascript">
+  window.Pragati = window.Pragati || {};
+  window.Pragati.common = window.Pragati.common || {};
+  window.Pragati.common.shop = {
+    permanent_domain: {{shop_permanent_domain | json}},
+    currency: {{shop_currency | json}},
+    id: {{shop_id | json}},
+    money_format: {{shop_money_format | json}},
+  };
+  window.Pragati.common.product = {
+    id: {{product_id | json}},
+    title: {{product_title | json}},
+    price: {{product_price | json}},
+    featured_image: {{product_featured_image | json}},
+    variant: {{variant | json}},
+  }
+  window.Pragati.common.metafield = {
+    buy_button: {{metafield_buy_button}}, //when using | json getting "json not allowed for this object"
+    form_designer: {{metafield_form_designer}}, //when using | json getting "json not allowed for this object"
+    form_designer2: {{metafield_form_designer2}},
+    states: {{metafield_states}},
+    phoneCode: {{metafield_phoneCode}},
+    country: {{getCountry | json}},
+    visibility_page: {{metafield_visibility_page}}
+  }
+
+  // i don't know, maybe because of this when previewing in store getting error meta syntax error.
+  // const meta = {{metafield_buy_button}};
+  // console.log(typeof meta);
+  console.log({{metafield_visibility_page}});
+</script>
+
+
+{% schema %} { "name": "Kriya COD Form", "target": "body", "stylesheet":
+"app.css", "javascript": "app.js", "settings": [] } {% endschema %}

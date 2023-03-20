@@ -1,0 +1,319 @@
+.pragati-buy-button {
+  flex-wrap: wrap;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.2rem;
+  font-weight: 700;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+  width: 100%;
+  border-style: solid; /* to remove anti-aliasing effect. */
+}
+
+.pragati-svg-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.pragati-cod-form-modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.4rem;
+  width: 90%; /* change width from 450px to 90vw */
+  padding: 21px; /* change padding to 21px from 1.3rem (13px was comming from 1.3rem) */
+  min-height: 250px;
+  position: absolute;
+  top: 20px; /* change it to 20px from 20% */
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+}
+
+.pragati-cod-form-overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.pragati-cod-form-hidden {
+  display: none;
+}
+
+.pragati-cod-form-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pragati-cod-form-btn-close {
+  padding: 0.5rem 0.7rem;
+  background: #eee;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.pragati-cod-form-modal-container {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .pragati-cod-form-modal {
+    width: 500px;
+  }
+}
+
+.pragati-cod-form-img {
+  height: 60px;
+  width: 60px;
+  border-radius: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.pragati-cod-form-hr-1 {
+  /*  margin-bottom: 5px;*/
+  margin: 0px 0px 5px 0px !important;
+}
+
+.pragati-cod-form-hr-2 {
+  /*  margin-top: 5px;*/
+  margin: 5px 0px 0px 0px !important;
+}
+
+.pragati-cod-form-hr-3 {
+  margin: 0px 0px 0px 0px !important;
+}
+
+/*i dont why not work, that's why add padding left in pragati-cod-form-modal input[type="text"]*/
+/*.pragati-cod-form-inputWithIcon input[type="text"] {
+  padding-left: 35px;
+}*/
+
+.pragati-cod-form-inputWithIcon {
+  position: relative;
+}
+
+.pragati-cod-form-inputWithIcon i {
+  position: absolute;
+  left: 0;
+  top: 8px;
+  padding: 9px 8px;
+  color: #aaa;
+  transition: 0.3s;
+}
+
+/*.pragati-cod-form-inputWithIcon input[type="text"]:focus + i {
+  color: dodgerBlue;
+}*/
+
+.pragati-cod-form-modal input.textfieldfocus-red:focus + i {
+  color: #ff381e;
+}
+
+.pragati-cod-form-modal input.textfieldfocus-blue:focus + i {
+  color: dodgerblue;
+}
+
+.pragati-cod-form-modal input.textfieldfocus-orange:focus + i {
+  color: #ff8b1e;
+}
+
+.pragati-cod-form-modal input.textfieldfocus-brown:focus + i {
+  color: #ff561e;
+}
+
+.pragati-cod-form-modal input.textfieldfocus-purple:focus + i {
+  color: #8f1eff;
+}
+
+.pragati-cod-form-modal input.textfieldfocus-pink:focus + i {
+  color: #ff1ec3;
+}
+
+.pragati-cod-form-modal input {
+  width: 100%;
+  border: 2px solid #aaa;
+  border-radius: 6px;
+  outline: none;
+  padding: 8px;
+  box-sizing: border-box;
+  transition: 0.3s;
+  padding-left: 35px;
+}
+
+/*.pragati-cod-form-modal input[type="text"]:focus {
+  border-color: dodgerBlue;
+  box-shadow: 0 0 8px 0 dodgerBlue;
+}*/
+
+.pragati-cod-form-modal input.textfieldfocus-red:focus {
+  border-color: #ff381e !important; /*using !important because of conflict between modal's input's style prop's border and this property */
+  box-shadow: 0 0 8px 0 #ff381e;
+}
+
+.pragati-cod-form-modal input.textfieldfocus-blue:focus {
+  border-color: dodgerblue !important;
+  box-shadow: 0 0 8px 0 dodgerblue;
+}
+
+.pragati-cod-form-modal input.textfieldfocus-orange:focus {
+  border-color: #ff8b1e !important;
+  box-shadow: 0 0 8px 0 #ff8b1e;
+}
+
+.pragati-cod-form-modal input.textfieldfocus-brown:focus {
+  border-color: #ff561e !important;
+  box-shadow: 0 0 8px 0 #ff561e;
+}
+
+.pragati-cod-form-modal input.textfieldfocus-purple:focus {
+  border-color: #8f1eff !important;
+  box-shadow: 0 0 8px 0 #8f1eff;
+}
+
+.pragati-cod-form-modal input.textfieldfocus-pink:focus {
+  border-color: #ff1ec3 !important;
+  box-shadow: 0 0 8px 0 #ff1ec3;
+}
+
+.pragati-cod-form-modal input {
+  font-size: 0.9em;
+}
+
+.pragati-cod-form-inputWithIcon i {
+  position: absolute;
+  left: 0;
+  top: 8px;
+  padding: 9px 12px; /* change the padding to 9px 12px from 9px 8px */ /* date: 02-03-23 */
+  color: #aaa;
+  transition: 0.3s;
+}
+
+.pragati-cod-form-modal h5 {
+  font-size: 14px;
+}
+
+#pragati_input_state_field {
+  padding: 10px;
+  width: 100%;
+  border-radius: 6px;
+  outline: none;
+}
+
+/*#pragati_input_state_field:focus {
+  border-color: dodgerBlue !important;
+  box-shadow: 0 0 8px 0 dodgerBlue;
+  transition: 0.3s;
+}*/
+
+.pragati-cod-form-modal #pragati_input_state_field.textfieldfocus-red:focus {
+  border-color: #ff381e !important;
+  box-shadow: 0 0 8px 0 #ff381e;
+  transition: 0.3s;
+}
+
+.pragati-cod-form-modal #pragati_input_state_field.textfieldfocus-blue:focus {
+  border-color: dodgerblue !important;
+  box-shadow: 0 0 8px 0 dodgerblue;
+  transition: 0.3s;
+}
+
+.pragati-cod-form-modal #pragati_input_state_field.textfieldfocus-orange:focus {
+  border-color: #ff8b1e !important;
+  box-shadow: 0 0 8px 0 #ff8b1e;
+  transition: 0.3s;
+}
+
+.pragati-cod-form-modal #pragati_input_state_field.textfieldfocus-brown:focus {
+  border-color: #ff561e !important;
+  box-shadow: 0 0 8px 0 #ff561e;
+  transition: 0.3s;
+}
+
+.pragati-cod-form-modal #pragati_input_state_field.textfieldfocus-purple:focus {
+  border-color: #8f1eff !important;
+  box-shadow: 0 0 8px 0 #8f1eff;
+  transition: 0.3s;
+}
+
+.pragati-cod-form-modal #pragati_input_state_field.textfieldfocus-pink:focus {
+  border-color: #ff1ec3 !important;
+  box-shadow: 0 0 8px 0 #ff1ec3;
+  transition: 0.3s;
+}
+
+.pragati-cod-form-modal button.order_summit_button {
+  cursor: pointer;
+  border: none;
+  font-weight: 600;
+  background-color: black;
+}
+
+/* Chrome, Safari, Edge, Opera */
+.pragati-cod-form-modal input[type="number"]::-webkit-outer-spin-button,
+.pragati-cod-form-modal input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.loader {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #fff;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+
+label.pragati-cod-form-required::after {
+  content: " *";
+  color: red;
+}
+
+
+.pragati-red-border {
+  border-color: #ff381e !important;
+}
+
+
+.pragati-required-message {
+  display: block !important;
+  color: #ff381e;
+}
+
+.pragati-invalid-message {
+  display: block !important;
+  color: #ff381e;
+}
