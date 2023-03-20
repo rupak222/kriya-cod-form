@@ -924,7 +924,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 			data: orderInfo,
 		};
 
-		fetch("https://gadget-demo-two--development.gadget.app/api/graphql/", {
+		fetch("https://gadget-demo-two.gadget.app/api/graphql/", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
