@@ -169,7 +169,7 @@ export default function HomePage() {
                   <p>1. Open your theme by clicking on this button: </p>
                   <Button
                     primary
-                    url={`https://${data?.domain}/admin/themes/current/editor?context=apps&template=product&activateAppId=a80d6f97-b7e7-44cb-b696-d18a54469d2d/app-block`}
+                    url={`https://${data?.domain}/admin/themes/current/editor?context=apps&template=product&activateAppId=3bc7bd84-5bdb-43aa-9dbc-90a7b52adca0/app-block`}
                   >
                     Open theme
                   </Button>
