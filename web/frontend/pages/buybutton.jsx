@@ -460,7 +460,7 @@ export default function BuyButton() {
                   </Popover>
                 </Stack>
               </Stack>
-
+{/*
               <Banner title="Suggestions?" status="info">
                 <FormLayout>
                   <p>
@@ -483,7 +483,7 @@ export default function BuyButton() {
                     Contact Us
                   </a>
                 </FormLayout>
-              </Banner>
+              </Banner>*/}
             </FormLayout>
           </Card>
         </Layout.Section>
