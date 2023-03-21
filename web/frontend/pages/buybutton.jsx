@@ -87,6 +87,7 @@ export default function BuyButton() {
 
 
   useEffect(() => {
+    window.scroll(0, document.documentElement.scrollHeight);
     runReadMetafieldFunction();
   }, []);
 
@@ -388,7 +389,7 @@ export default function BuyButton() {
                   <Popover
                     active={popoverActive}
                     activator={activator}
-                    // autofocusTarget="first-node" 
+                    autofocusTarget="first-node" 
                     onClose={togglePopoverActive}
                   >
                     <div
