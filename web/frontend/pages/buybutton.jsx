@@ -386,9 +386,9 @@ export default function BuyButton() {
                   />
                   <Popover
                     active={popoverActive}
-                    // activator={activator}
+                    activator={activator}
                     // autofocusTarget="first-node" 
-                    // onClose={togglePopoverActive}
+                    onClose={togglePopoverActive}
                   >
                     <div
                       style={{ padding: "10px", display: "flex", gap: "7px" }}
