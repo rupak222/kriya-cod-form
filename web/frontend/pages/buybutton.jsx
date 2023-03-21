@@ -334,21 +334,6 @@ export default function BuyButton() {
                 />
               </Stack>
 
-              <p>Background Color</p>
-              <HexColorPicker
-                color={buyButtonData.backgroundColor}
-                onChange={handleButtonBackgroundColorChange}
-              />
-              <p>Text Color</p>
-              <HexColorPicker
-                onChange={handleButtonTextColorChange}
-                color={buyButtonData.textColor}
-              />
-              <p>Border Color</p>
-              <HexColorPicker
-                onChange={handleButtonBorderColorChange}
-                color={buyButtonData.borderColor}
-              />
               <Popover
                     active={popoverActive}
                     activator={activator}
@@ -423,6 +408,23 @@ export default function BuyButton() {
                       />
                     </div>
                   </Popover>
+
+              <p>Background Color</p>
+              <HexColorPicker
+                color={buyButtonData.backgroundColor}
+                onChange={handleButtonBackgroundColorChange}
+              />
+              <p>Text Color</p>
+              <HexColorPicker
+                onChange={handleButtonTextColorChange}
+                color={buyButtonData.textColor}
+              />
+              <p>Border Color</p>
+              <HexColorPicker
+                onChange={handleButtonBorderColorChange}
+                color={buyButtonData.borderColor}
+              />
+
 
               <Stack>
                 <RangeSlider
