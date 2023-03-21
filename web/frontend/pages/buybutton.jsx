@@ -413,7 +413,7 @@ export default function BuyButton() {
                           setContextualSaveBar(true);
                         }}
                       />
-                      <div
+                      <div 
                         style={{
                           padding: "15px",
                           backgroundColor: "blue",
