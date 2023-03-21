@@ -375,7 +375,7 @@ export default function BuyButton() {
                   min={0}
                   max={10}
                 />
-                <Stack vertical>
+                {/*<Stack vertical>
                   <RangeSlider
                     label="Shadow"
                     value={buyButtonData.shadow}
@@ -458,7 +458,7 @@ export default function BuyButton() {
                       />
                     </div>
                   </Popover>
-                </Stack>
+                </Stack>*/}
               </Stack>
 {/*
               <Banner title="Suggestions?" status="info">
