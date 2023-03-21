@@ -393,7 +393,7 @@ export default function BuyButton() {
                     <div
                       style={{ padding: "10px", display: "flex", gap: "7px", backgroundColor: "skyblue" }}
                     >
-                     {/* <div
+                      {/*<div
                         style={{
                           padding: "15px",
                           backgroundColor: "red",
@@ -455,8 +455,8 @@ export default function BuyButton() {
                           }));
                           togglePopoverActive();
                         }}
-                      />
-                    </div>*/}
+                      />*/}
+                    </div>
                   </Popover>
                 </Stack>
               </Stack>
