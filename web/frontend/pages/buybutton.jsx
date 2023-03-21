@@ -87,7 +87,6 @@ export default function BuyButton() {
 
 
   useEffect(() => {
-    window.scroll(0, document.documentElement.scrollHeight);
     runReadMetafieldFunction();
   }, []);
 
