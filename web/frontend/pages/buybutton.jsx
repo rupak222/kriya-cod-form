@@ -29,9 +29,8 @@ import {
   HideMinor,
 } from "@shopify/polaris-icons";
 
-import { TitleBar } from "@shopify/app-bridge-react";
 
-import { useState, useCallback, useEffect, useLayoutEffect } from "react";
+import { useState, useCallback, useEffect } from "react";
 
 import { buyButton } from "../assets";
 
@@ -376,7 +375,7 @@ export default function BuyButton() {
                   min={0}
                   max={10}
                 />
-                <Stack vertical>
+                {/*<Stack vertical>
                   <RangeSlider
                     label="Shadow"
                     value={buyButtonData.shadow}
@@ -459,9 +458,9 @@ export default function BuyButton() {
                       />
                     </div>
                   </Popover>
-                </Stack>
+                </Stack>*/}
               </Stack>
-
+{/*
               <Banner title="Suggestions?" status="info">
                 <FormLayout>
                   <p>
@@ -484,7 +483,7 @@ export default function BuyButton() {
                     Contact Us
                   </a>
                 </FormLayout>
-              </Banner>
+              </Banner>*/}
             </FormLayout>
           </Card>
         </Layout.Section>
