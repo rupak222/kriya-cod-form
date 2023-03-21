@@ -125,14 +125,9 @@ export default function BuyButton() {
   );
 
   const activator = (
-    <div>
-      <Button onClick={togglePopoverActive} disclosure>
-        Color
-      </Button>
-      <p style={{ color: "grey" }}>
-        Textbox on focus color, click on any textbox to see the effect.
-      </p>
-    </div>
+    <Button onClick={togglePopoverActive} disclosure>
+      Shadow Color
+    </Button>
   );
 
   const buttonTextHandleChange = useCallback((value) => {
@@ -354,42 +349,7 @@ export default function BuyButton() {
                 onChange={handleButtonBorderColorChange}
                 color={buyButtonData.borderColor}
               />
-
-              <Stack>
-                <RangeSlider
-                  label="Font Size"
-                  value={buyButtonData.fontSize}
-                  onChange={handleFontSizeRangeSliderChange}
-                  output
-                  min={10}
-                  max={20}
-                />
-                <RangeSlider
-                  label="Border Radius"
-                  value={buyButtonData.borderRadius}
-                  onChange={handleBorderRadiusRangeSliderChange}
-                  output
-                  min={0}
-                  max={10}
-                />
-                <RangeSlider
-                  label="Border Width"
-                  value={buyButtonData.borderWidth}
-                  onChange={handleBorderWidthRangeSliderChange}
-                  output
-                  min={0}
-                  max={10}
-                />
-                <Stack vertical>
-                  <RangeSlider
-                    label="Shadow"
-                    value={buyButtonData.shadow}
-                    onChange={handleShadowRangeSliderChange}
-                    output
-                    min={0}
-                    max={10}
-                  />
-                  <Popover
+              <Popover
                     active={popoverActive}
                     activator={activator}
                     autofocusTarget="first-node" 
@@ -463,6 +423,42 @@ export default function BuyButton() {
                       />
                     </div>
                   </Popover>
+
+              <Stack>
+                <RangeSlider
+                  label="Font Size"
+                  value={buyButtonData.fontSize}
+                  onChange={handleFontSizeRangeSliderChange}
+                  output
+                  min={10}
+                  max={20}
+                />
+                <RangeSlider
+                  label="Border Radius"
+                  value={buyButtonData.borderRadius}
+                  onChange={handleBorderRadiusRangeSliderChange}
+                  output
+                  min={0}
+                  max={10}
+                />
+                <RangeSlider
+                  label="Border Width"
+                  value={buyButtonData.borderWidth}
+                  onChange={handleBorderWidthRangeSliderChange}
+                  output
+                  min={0}
+                  max={10}
+                />
+                <Stack vertical>
+                  <RangeSlider
+                    label="Shadow"
+                    value={buyButtonData.shadow}
+                    onChange={handleShadowRangeSliderChange}
+                    output
+                    min={0}
+                    max={10}
+                  />
+                  
                 </Stack>
               </Stack>
 
