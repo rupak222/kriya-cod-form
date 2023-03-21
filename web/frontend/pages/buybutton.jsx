@@ -117,7 +117,7 @@ export default function BuyButton() {
   const [contextualSaveBar, setContextualSaveBar] = useState(false);
   const [contextualSaveBarSaveButtonLoading, setContextualSaveBarSaveButtonLoading] = useState(false);
 
-  const [popoverActive, setPopoverActive] = useState(true);
+  const [popoverActive, setPopoverActive] = useState(false);
 
   const togglePopoverActive = useCallback(
     () => setPopoverActive((popoverActive) => !popoverActive),
