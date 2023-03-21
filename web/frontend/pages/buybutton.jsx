@@ -384,11 +384,11 @@ export default function BuyButton() {
                     min={0}
                     max={10}
                   />
-                  {/*<Popover
+                  <Popover
                     active={popoverActive}
-                    activator={activator}
-                    autofocusTarget="first-node" 
-                    onClose={togglePopoverActive}
+                    // activator={activator}
+                    // autofocusTarget="first-node" 
+                    // onClose={togglePopoverActive}
                   >
                     <div
                       style={{ padding: "10px", display: "flex", gap: "7px" }}
@@ -457,7 +457,7 @@ export default function BuyButton() {
                         }}
                       />
                     </div>
-                  </Popover>*/}
+                  </Popover>
                 </Stack>
               </Stack>
 
